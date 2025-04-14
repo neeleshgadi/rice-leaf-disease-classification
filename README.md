@@ -21,13 +21,13 @@ The dataset consists of images stored in three folders (one per class). It was l
 
 ## 🔍 Confusion Matrix
 
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 
 ---
 
 ## 🌿 Sample Predictions
 
-![Sample Predictions](images/sample_predictions.png)
+![Sample Predictions](sample_predictions.png)
 
 ---
 
