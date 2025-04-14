@@ -15,7 +15,7 @@ The dataset consists of images stored in three folders (one per class). It was l
 
 ## 📈 Training & Validation Accuracy/Loss
 
-![Training Plot](images/accuracy_loss_plot.png)
+![Training Plot](accuracy_loss_plot.png)
 
 ---
 
