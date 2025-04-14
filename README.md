@@ -1,49 +1,64 @@
-# Rice Leaf Disease Classification 🌾🤖
+# 🌾 Rice Leaf Disease Classification Using MobileNetV2
 
-This project uses **MobileNetV2** and **Transfer Learning** to classify rice leaf diseases using computer vision.
+This project uses **transfer learning** with MobileNetV2 to classify rice leaf diseases into 3 categories using image data. It includes data augmentation, model training, evaluation, and visualization of results.
 
 ## 📁 Dataset
+The dataset consists of images stored in three folders (one per class). It was loaded and augmented using `ImageDataGenerator` from TensorFlow.
 
-Images are categorized into 3 classes of rice leaf diseases. (Dataset stored on Google Drive — not uploaded here due to size constraints.)
+## 🧠 Model Architecture
+- **Base Model**: MobileNetV2 (pre-trained on ImageNet)
+- **Layers Added**:
+  - GlobalAveragePooling2D
+  - Dense(128, relu) + Dropout
+  - Dense(64, relu)
+  - Dense(3, softmax)
 
-## 📊 Technologies Used
+## 📈 Training & Validation Accuracy/Loss
 
-- TensorFlow & Keras
-- MobileNetV2
-- Google Colab
-- Matplotlib / Seaborn
-- scikit-learn (for confusion matrix & classification report)
-
-## 🧠 Model Highlights
-
-- Used `ImageDataGenerator` for augmentation
-- 80/20 train-validation split
-- Fine-tuned classification head on MobileNetV2
-- Visualized training curves, confusion matrix & sample predictions
-
-## 📈 Training Plot
-
-Plots for accuracy and loss during training and validation.
-
-## ✅ Results
-
-Model performs well across all 3 classes with high validation accuracy.
-
-## 🚀 How to Run
-
-1. Upload dataset to your Google Drive.
-2. Update the dataset path in the notebook.
-3. Run all cells in `rice_leaf_classification.ipynb`.
-
-## 📄 Output
-
-- Trained model saved as `.keras` file
-- Evaluation using confusion matrix & classification report
-
-## 📌 Sample Output
-
-![confusion_matrix](path_to_image_if_uploaded)
+![Training Plot](images/accuracy_loss_plot.png)
 
 ---
 
-Feel free to fork and use this project for your own leaf disease classification tasks!
+## 🔍 Confusion Matrix
+
+![Confusion Matrix](images/confusion_matrix.png)
+
+---
+
+## 🌿 Sample Predictions
+
+![Sample Predictions](images/sample_predictions.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- TensorFlow / Keras
+- Google Colab
+- Matplotlib / Seaborn
+- MobileNetV2
+- Scikit-learn (for metrics)
+
+---
+
+## 📂 Model Save Format
+
+The final trained model is saved in `.keras` format and stored on Google Drive.
+
+---
+
+## 📊 Evaluation
+
+Includes classification report and visualized confusion matrix. Results show good performance on validation data.
+
+---
+
+## 💡 Future Improvements
+
+- Test on more diverse datasets
+- Add real-time prediction script
+- Deploy via Flask or Streamlit
+
+---
+
+> Developed by **Neelesh Gadi** | [LinkedIn](#) | [Portfolio](#)  
